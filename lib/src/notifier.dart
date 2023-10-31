@@ -1,5 +1,6 @@
-part of '../flutter_network_status.dart';
+part of '../network_status.dart';
 
+/// to notify current network status
 class NetworkNotifier extends ValueNotifier<bool> {
   NetworkNotifier(super.value);
 

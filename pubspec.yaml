@@ -1,4 +1,4 @@
-name: flutter_network_status
+name: network_status
 description: This is a network connectivity state listenable provider and service.
 version: 0.0.1
 repository: https://github.com/Mohiuddin655-ORG/flutter_network_status.git

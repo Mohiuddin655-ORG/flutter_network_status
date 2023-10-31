@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_network_status/flutter_network_status.dart';
+import 'package:flutter_network_status/network_status.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /// Step - 1:
+    /// NetworkProvider use to live observation connectivity
     return NetworkProvider(
-      child: MaterialApp(
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Network Provider',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: const HomePage(),
+        home: HomePage(),
       ),
     );
   }
@@ -33,14 +32,16 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('QuoteView'),
+        title: const Text('Home'),
         centerTitle: true,
       ),
       body: Center(
+        /// Step - 2:
+        /// NetworkListener use to listener network status when network connection turn on or off
         child: NetworkListener(
-          builder: (context, value) {
+          builder: (context, isConnected) {
             return Text(
-              'Network is ${value ? "Available" : "Unavailable"}',
+              'Network is ${isConnected ? "Available" : "Unavailable"}',
               style: const TextStyle(fontSize: 20),
             );
           },

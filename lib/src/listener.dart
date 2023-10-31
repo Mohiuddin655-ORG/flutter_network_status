@@ -1,5 +1,6 @@
-part of '../flutter_network_status.dart';
+part of '../network_status.dart';
 
+/// to listen network status anywhere with [NetworkListener]
 class NetworkListener extends StatelessWidget {
   final Widget Function(BuildContext context, bool isConnected) builder;
 

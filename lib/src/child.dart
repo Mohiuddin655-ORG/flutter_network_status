@@ -1,5 +1,6 @@
-part of '../flutter_network_status.dart';
+part of '../network_status.dart';
 
+/// supporting network provider view
 class _NetworkView extends StatefulWidget {
   final Widget child;
 

@@ -1,5 +1,6 @@
-part of '../flutter_network_status.dart';
+part of '../network_status.dart';
 
+/// to observe the network state with live update when network status change
 class NetworkProvider extends InheritedWidget {
   final NetworkNotifier notifier;
 
