@@ -1,20 +1,24 @@
 name: flutter_network_status
 description: This is a network connectivity state listenable provider and service.
-version: 0.0.1
+version: 0.0.3
 repository: https://github.com/Mohiuddin655-ORG/flutter_network_status.git
 
 environment:
-  sdk: '>=3.1.5 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
+
   connectivity_plus: ^5.0.1
+
   flutter:
     sdk: flutter
 
 dev_dependencies:
+
+  flutter_lints: ^3.0.1
+
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
 
 flutter:
